@@ -1,7 +1,7 @@
 package br.com.fiap.EnergyMonitor.mappers;
 
 import br.com.fiap.EnergyMonitor.dto.CreateSectorDto;
-import br.com.fiap.EnergyMonitor.dto.SectorDto;
+import br.com.fiap.EnergyMonitor.dto.SectorOutputDto;
 import br.com.fiap.EnergyMonitor.model.Sector;
 import br.com.fiap.EnergyMonitor.model.User;
 
@@ -17,17 +17,14 @@ public class SectorMapper {
         return sector;
     }
 
-    public static SectorDto toDTO(Sector sector) {
-        return new SectorDto(
-                sector.getId(),
-                sector.getName(),
-                sector.getConsumptionLimit()
-        );
+    public static SectorOutputDto toDTO(Sector sector) {
+        return new SectorOutputDto(sector);
     }
 
-    public static List<SectorDto> toDTOList(List<Sector> sectors) {
+    public static List<SectorOutputDto> toDTOList(List<Sector> sectors) {
         return sectors.stream()
                 .map(SectorMapper::toDTO)
                 .toList();
     }
 }
+
