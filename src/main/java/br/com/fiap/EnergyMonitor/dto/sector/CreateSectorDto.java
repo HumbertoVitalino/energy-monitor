@@ -1,4 +1,4 @@
-package br.com.fiap.EnergyMonitor.dto;
+package br.com.fiap.EnergyMonitor.dto.sector;
 
 import jakarta.validation.constraints.DecimalMin;
 import jakarta.validation.constraints.NotBlank;
