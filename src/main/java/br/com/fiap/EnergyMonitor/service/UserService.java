@@ -4,12 +4,9 @@ import br.com.fiap.EnergyMonitor.dto.CreateUserDto;
 import br.com.fiap.EnergyMonitor.dto.UserOutputDto;
 import br.com.fiap.EnergyMonitor.model.User;
 import br.com.fiap.EnergyMonitor.repository.UserRepository;
-import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
-
-import java.util.Optional;
 
 @Service
 public class UserService {
@@ -18,37 +15,35 @@ public class UserService {
     private UserRepository repository;
 
     public UserOutputDto create(CreateUserDto user) {
-        String cptPassword = new BCryptPasswordEncoder().encode(user.password());
-        var entity = new User();
-        BeanUtils.copyProperties(user, entity);
+        if (repository.findByEmail(user.email()) != null) {
+            throw new RuntimeException("User already exists");
+        }
+        User entity = new User();
+        entity.setEmail(user.email());
+        entity.setPassword(new BCryptPasswordEncoder().encode(user.password()));
+        entity.setName(user.name());
+        entity.setRole(user.role());
 
-        entity.setPassword(cptPassword);
         return new UserOutputDto(repository.save(entity));
     }
 
     public UserOutputDto findById(Long id) {
-        Optional<User> user = repository.findById(id);
-        if (user.isPresent()) {
-            return new UserOutputDto(user.get());
-        }
-        throw new RuntimeException("Unable to find user with id: " + id);
+        User user = repository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Unable to find user with id: " + id));
+        return new UserOutputDto(user);
     }
 
     public void deleteById(Long id) {
-        Optional<User> userOptional = repository.findById(id);
+        User user = repository.findById(id)
+                .orElseThrow(() -> new RuntimeException("User not found!"));
 
-        if (userOptional.isPresent()) {
-            repository.delete(userOptional.get());
-        }
-        throw new RuntimeException("User not found!");
+        repository.delete(user);
     }
 
     public User update(User user) {
-        Optional<User> userOptional = repository.findById(user.getId());
+        repository.findById(user.getId())
+                .orElseThrow(() -> new RuntimeException("User not found!"));
 
-        if (userOptional.isPresent()) {
-            return repository.save(user);
-        }
-        throw new RuntimeException("User not found!");
+        return repository.save(user);
     }
 }
