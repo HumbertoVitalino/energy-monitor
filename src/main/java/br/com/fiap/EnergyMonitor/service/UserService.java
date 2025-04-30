@@ -1,7 +1,7 @@
 package br.com.fiap.EnergyMonitor.service;
 
-import br.com.fiap.EnergyMonitor.dto.CreateUserDto;
-import br.com.fiap.EnergyMonitor.dto.UserOutputDto;
+import br.com.fiap.EnergyMonitor.dto.user.CreateUserDto;
+import br.com.fiap.EnergyMonitor.dto.user.UserOutputDto;
 import br.com.fiap.EnergyMonitor.model.User;
 import br.com.fiap.EnergyMonitor.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
