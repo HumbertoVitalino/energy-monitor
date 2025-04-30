@@ -22,6 +22,7 @@ public class UserService {
         entity.setEmail(user.email());
         entity.setPassword(new BCryptPasswordEncoder().encode(user.password()));
         entity.setName(user.name());
+        entity.setRole(user.role());
 
         return new UserOutputDto(repository.save(entity));
     }
