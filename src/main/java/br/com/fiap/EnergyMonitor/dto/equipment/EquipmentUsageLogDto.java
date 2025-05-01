@@ -7,6 +7,7 @@ import java.time.LocalDateTime;
 public record EquipmentUsageLogDto(
         Long id,
         Long equipmentId,
+        String equipmentName,
         LocalDateTime startedAt,
         LocalDateTime endedAt,
         Double estimatedConsumption
@@ -15,6 +16,7 @@ public record EquipmentUsageLogDto(
         this(
                 log.getId(),
                 log.getEquipment().getId(),
+                log.getEquipment().getName(),
                 log.getStartedAt(),
                 log.getEndedAt(),
                 log.getEstimatedConsumption()
