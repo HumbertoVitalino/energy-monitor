@@ -1,4 +1,4 @@
-package br.com.fiap.EnergyMonitor.dto;
+package br.com.fiap.EnergyMonitor.dto.user;
 
 
 import br.com.fiap.EnergyMonitor.model.User;

@@ -1,5 +1,6 @@
-package br.com.fiap.EnergyMonitor.dto;
+package br.com.fiap.EnergyMonitor.dto.sector;
 
+import br.com.fiap.EnergyMonitor.dto.user.UserOutputDto;
 import br.com.fiap.EnergyMonitor.model.Sector;
 
 public record SectorOutputDto(

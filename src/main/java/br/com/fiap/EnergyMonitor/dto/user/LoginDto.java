@@ -1,4 +1,4 @@
-package br.com.fiap.EnergyMonitor.dto;
+package br.com.fiap.EnergyMonitor.dto.user;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;

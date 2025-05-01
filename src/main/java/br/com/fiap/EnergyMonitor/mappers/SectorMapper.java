@@ -1,7 +1,7 @@
 package br.com.fiap.EnergyMonitor.mappers;
 
-import br.com.fiap.EnergyMonitor.dto.CreateSectorDto;
-import br.com.fiap.EnergyMonitor.dto.SectorOutputDto;
+import br.com.fiap.EnergyMonitor.dto.sector.CreateSectorDto;
+import br.com.fiap.EnergyMonitor.dto.sector.SectorOutputDto;
 import br.com.fiap.EnergyMonitor.model.Sector;
 import br.com.fiap.EnergyMonitor.model.User;
 

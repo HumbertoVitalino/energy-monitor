@@ -21,7 +21,7 @@ public class Sector {
             sequenceName = "SECTOR_SEQ",
             allocationSize = 1
     )
-    private long Id;
+    private long id;
     private String name;
     private Double consumptionLimit;
 

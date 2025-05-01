@@ -1,8 +1,8 @@
 package br.com.fiap.EnergyMonitor.controller;
 
-import br.com.fiap.EnergyMonitor.dto.CreateUserDto;
-import br.com.fiap.EnergyMonitor.dto.LoginDto;
-import br.com.fiap.EnergyMonitor.dto.UserOutputDto;
+import br.com.fiap.EnergyMonitor.dto.user.CreateUserDto;
+import br.com.fiap.EnergyMonitor.dto.user.LoginDto;
+import br.com.fiap.EnergyMonitor.dto.user.UserOutputDto;
 import br.com.fiap.EnergyMonitor.model.User;
 import br.com.fiap.EnergyMonitor.service.TokenService;
 import br.com.fiap.EnergyMonitor.service.UserService;
