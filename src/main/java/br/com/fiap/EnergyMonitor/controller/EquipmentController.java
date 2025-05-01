@@ -9,7 +9,6 @@ import br.com.fiap.EnergyMonitor.model.User;
 import br.com.fiap.EnergyMonitor.repository.SectorRepository;
 import br.com.fiap.EnergyMonitor.service.AuthorizationService;
 import br.com.fiap.EnergyMonitor.service.EquipmentService;
-import br.com.fiap.EnergyMonitor.service.SectorService;
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +17,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/api")
@@ -38,7 +38,7 @@ public class EquipmentController {
 
         if (userDetails instanceof User user) {
             Sector sector = sectorRepository.findById(dto.sectorId())
-                    .orElseThrow(() -> new EntityNotFoundException("Setor não encontrado"));
+                    .orElseThrow(() -> new EntityNotFoundException("Sector not found!"));
 
             Equipment equipment = EquipmentMapper.toEntity(dto, user, sector);
             Equipment created = equipmentService.create(equipment);
@@ -46,6 +46,16 @@ public class EquipmentController {
         } else {
             return ResponseEntity.status(HttpStatus.FORBIDDEN).build();
         }
+    }
+
+    @GetMapping("/equipment/{id}")
+    public ResponseEntity<EquipmentOutputDto> getById(@PathVariable Long id) {
+        UserDetails userDetails = authService.getAuthenticatedUser();
+        Optional<Equipment> equipment = equipmentService.findById(id, userDetails.getUsername());
+
+        return equipment
+                .map(value -> ResponseEntity.ok(new EquipmentOutputDto(value)))
+                .orElseGet(() -> ResponseEntity.status(HttpStatus.NOT_FOUND).body(null));
     }
 
     @GetMapping("/equipment")
