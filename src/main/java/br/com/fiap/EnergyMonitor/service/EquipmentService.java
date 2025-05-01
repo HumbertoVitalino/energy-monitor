@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import java.time.Duration;
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class EquipmentService {
@@ -28,6 +29,20 @@ public class EquipmentService {
 
     public List<Equipment> findAllByUserEmail(String email) {
         return equipmentRepository.findAllByUserEmail(email);
+    }
+
+    public Optional<Equipment> findById(Long id, String userEmail) {
+        Optional<Equipment> equipmentOptional = equipmentRepository.findById(id);
+
+        if (equipmentOptional.isPresent()) {
+            Equipment equipment = equipmentOptional.get();
+            if (!equipment.getUser().getEmail().equals(userEmail)) {
+                throw new RuntimeException("Equipment dont belong to user");
+            }
+            return equipmentOptional;
+        } else {
+            throw new RuntimeException("Equipment not found!");
+        }
     }
 
     public void activate(Long id, String userEmail) {
