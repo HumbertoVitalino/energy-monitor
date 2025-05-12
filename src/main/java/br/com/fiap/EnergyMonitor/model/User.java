@@ -80,4 +80,21 @@ public class User implements UserDetails {
     public boolean isEnabled() {
         return true;
     }
+
+    //Métodos que estão dando problema com o Lombok
+    public Long getId(){ return this.id; }
+
+    public String getName(){ return this.name; }
+
+    public String getEmail() { return this.email; }
+
+    public UserRoles getRole() { return this.role; }
+
+    public void setEmail(String email){ this.email = email; }
+
+    public void setPassword(String password){ this.password = password; }
+
+    public void setName(String name){ this.name = name; }
+
+    public void setRole(UserRoles userRoles){ this.role = userRoles; }
 }
