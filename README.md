@@ -22,7 +22,7 @@ This RESTful API is designed to help organizations monitor, optimize, and automa
 - Oracle Database XE
 - Spring Security + JWT
 - Flyway (DB migrations)
-- Docker & Docker Compose
+- Docker
 
 ---
 
