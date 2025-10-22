@@ -1,1 +1,5 @@
+br\com\fiap\EnergyMonitor\steps\CreateUserSteps.class
+br\com\fiap\EnergyMonitor\model\UserRoles.class
+br\com\fiap\EnergyMonitor\services\CreateUserService.class
 br\com\fiap\EnergyMonitor\EnergyMonitorApplicationTests.class
+br\com\fiap\EnergyMonitor\model\UserModel.class

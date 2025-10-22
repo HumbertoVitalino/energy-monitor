@@ -1,33 +1,33 @@
-C:\Users\barba\OneDrive\Documents\GitHub\energy-monitor\src\main\java\br\com\fiap\EnergyMonitor\advice\ApplicationExceptionHandler.java
-C:\Users\barba\OneDrive\Documents\GitHub\energy-monitor\src\main\java\br\com\fiap\EnergyMonitor\config\SecurityConfig.java
-C:\Users\barba\OneDrive\Documents\GitHub\energy-monitor\src\main\java\br\com\fiap\EnergyMonitor\config\TokenVerifier.java
-C:\Users\barba\OneDrive\Documents\GitHub\energy-monitor\src\main\java\br\com\fiap\EnergyMonitor\controller\AuthController.java
-C:\Users\barba\OneDrive\Documents\GitHub\energy-monitor\src\main\java\br\com\fiap\EnergyMonitor\controller\EquipmentController.java
-C:\Users\barba\OneDrive\Documents\GitHub\energy-monitor\src\main\java\br\com\fiap\EnergyMonitor\controller\EquipmentUsageLogController.java
-C:\Users\barba\OneDrive\Documents\GitHub\energy-monitor\src\main\java\br\com\fiap\EnergyMonitor\controller\SectorController.java
-C:\Users\barba\OneDrive\Documents\GitHub\energy-monitor\src\main\java\br\com\fiap\EnergyMonitor\controller\UserController.java
-C:\Users\barba\OneDrive\Documents\GitHub\energy-monitor\src\main\java\br\com\fiap\EnergyMonitor\dto\equipment\CreateEquipmentDto.java
-C:\Users\barba\OneDrive\Documents\GitHub\energy-monitor\src\main\java\br\com\fiap\EnergyMonitor\dto\equipment\EquipmentOutputDto.java
-C:\Users\barba\OneDrive\Documents\GitHub\energy-monitor\src\main\java\br\com\fiap\EnergyMonitor\dto\equipment\EquipmentUsageLogDto.java
-C:\Users\barba\OneDrive\Documents\GitHub\energy-monitor\src\main\java\br\com\fiap\EnergyMonitor\dto\sector\CreateSectorDto.java
-C:\Users\barba\OneDrive\Documents\GitHub\energy-monitor\src\main\java\br\com\fiap\EnergyMonitor\dto\sector\SectorOutputDto.java
-C:\Users\barba\OneDrive\Documents\GitHub\energy-monitor\src\main\java\br\com\fiap\EnergyMonitor\dto\user\CreateUserDto.java
-C:\Users\barba\OneDrive\Documents\GitHub\energy-monitor\src\main\java\br\com\fiap\EnergyMonitor\dto\user\LoginDto.java
-C:\Users\barba\OneDrive\Documents\GitHub\energy-monitor\src\main\java\br\com\fiap\EnergyMonitor\dto\user\UserOutputDto.java
-C:\Users\barba\OneDrive\Documents\GitHub\energy-monitor\src\main\java\br\com\fiap\EnergyMonitor\EnergyMonitorApplication.java
-C:\Users\barba\OneDrive\Documents\GitHub\energy-monitor\src\main\java\br\com\fiap\EnergyMonitor\mappers\EquipmentMapper.java
-C:\Users\barba\OneDrive\Documents\GitHub\energy-monitor\src\main\java\br\com\fiap\EnergyMonitor\mappers\SectorMapper.java
-C:\Users\barba\OneDrive\Documents\GitHub\energy-monitor\src\main\java\br\com\fiap\EnergyMonitor\model\Equipment.java
-C:\Users\barba\OneDrive\Documents\GitHub\energy-monitor\src\main\java\br\com\fiap\EnergyMonitor\model\EquipmentUsageLog.java
-C:\Users\barba\OneDrive\Documents\GitHub\energy-monitor\src\main\java\br\com\fiap\EnergyMonitor\model\Sector.java
-C:\Users\barba\OneDrive\Documents\GitHub\energy-monitor\src\main\java\br\com\fiap\EnergyMonitor\model\User.java
-C:\Users\barba\OneDrive\Documents\GitHub\energy-monitor\src\main\java\br\com\fiap\EnergyMonitor\model\UserRoles.java
-C:\Users\barba\OneDrive\Documents\GitHub\energy-monitor\src\main\java\br\com\fiap\EnergyMonitor\repository\EquipmentRepository.java
-C:\Users\barba\OneDrive\Documents\GitHub\energy-monitor\src\main\java\br\com\fiap\EnergyMonitor\repository\EquipmentUsageLogRepository.java
-C:\Users\barba\OneDrive\Documents\GitHub\energy-monitor\src\main\java\br\com\fiap\EnergyMonitor\repository\SectorRepository.java
-C:\Users\barba\OneDrive\Documents\GitHub\energy-monitor\src\main\java\br\com\fiap\EnergyMonitor\repository\UserRepository.java
-C:\Users\barba\OneDrive\Documents\GitHub\energy-monitor\src\main\java\br\com\fiap\EnergyMonitor\service\AuthorizationService.java
-C:\Users\barba\OneDrive\Documents\GitHub\energy-monitor\src\main\java\br\com\fiap\EnergyMonitor\service\EquipmentService.java
-C:\Users\barba\OneDrive\Documents\GitHub\energy-monitor\src\main\java\br\com\fiap\EnergyMonitor\service\SectorService.java
-C:\Users\barba\OneDrive\Documents\GitHub\energy-monitor\src\main\java\br\com\fiap\EnergyMonitor\service\TokenService.java
-C:\Users\barba\OneDrive\Documents\GitHub\energy-monitor\src\main\java\br\com\fiap\EnergyMonitor\service\UserService.java
+C:\Users\USER\Documents\FIAP\2º Ano\Fase 3\Projetos\energy-monitor\src\main\java\br\com\fiap\EnergyMonitor\advice\ApplicationExceptionHandler.java
+C:\Users\USER\Documents\FIAP\2º Ano\Fase 3\Projetos\energy-monitor\src\main\java\br\com\fiap\EnergyMonitor\config\SecurityConfig.java
+C:\Users\USER\Documents\FIAP\2º Ano\Fase 3\Projetos\energy-monitor\src\main\java\br\com\fiap\EnergyMonitor\config\TokenVerifier.java
+C:\Users\USER\Documents\FIAP\2º Ano\Fase 3\Projetos\energy-monitor\src\main\java\br\com\fiap\EnergyMonitor\controller\AuthController.java
+C:\Users\USER\Documents\FIAP\2º Ano\Fase 3\Projetos\energy-monitor\src\main\java\br\com\fiap\EnergyMonitor\controller\EquipmentController.java
+C:\Users\USER\Documents\FIAP\2º Ano\Fase 3\Projetos\energy-monitor\src\main\java\br\com\fiap\EnergyMonitor\controller\EquipmentUsageLogController.java
+C:\Users\USER\Documents\FIAP\2º Ano\Fase 3\Projetos\energy-monitor\src\main\java\br\com\fiap\EnergyMonitor\controller\SectorController.java
+C:\Users\USER\Documents\FIAP\2º Ano\Fase 3\Projetos\energy-monitor\src\main\java\br\com\fiap\EnergyMonitor\controller\UserController.java
+C:\Users\USER\Documents\FIAP\2º Ano\Fase 3\Projetos\energy-monitor\src\main\java\br\com\fiap\EnergyMonitor\dto\equipment\CreateEquipmentDto.java
+C:\Users\USER\Documents\FIAP\2º Ano\Fase 3\Projetos\energy-monitor\src\main\java\br\com\fiap\EnergyMonitor\dto\equipment\EquipmentOutputDto.java
+C:\Users\USER\Documents\FIAP\2º Ano\Fase 3\Projetos\energy-monitor\src\main\java\br\com\fiap\EnergyMonitor\dto\equipment\EquipmentUsageLogDto.java
+C:\Users\USER\Documents\FIAP\2º Ano\Fase 3\Projetos\energy-monitor\src\main\java\br\com\fiap\EnergyMonitor\dto\sector\CreateSectorDto.java
+C:\Users\USER\Documents\FIAP\2º Ano\Fase 3\Projetos\energy-monitor\src\main\java\br\com\fiap\EnergyMonitor\dto\sector\SectorOutputDto.java
+C:\Users\USER\Documents\FIAP\2º Ano\Fase 3\Projetos\energy-monitor\src\main\java\br\com\fiap\EnergyMonitor\dto\user\CreateUserDto.java
+C:\Users\USER\Documents\FIAP\2º Ano\Fase 3\Projetos\energy-monitor\src\main\java\br\com\fiap\EnergyMonitor\dto\user\LoginDto.java
+C:\Users\USER\Documents\FIAP\2º Ano\Fase 3\Projetos\energy-monitor\src\main\java\br\com\fiap\EnergyMonitor\dto\user\UserOutputDto.java
+C:\Users\USER\Documents\FIAP\2º Ano\Fase 3\Projetos\energy-monitor\src\main\java\br\com\fiap\EnergyMonitor\EnergyMonitorApplication.java
+C:\Users\USER\Documents\FIAP\2º Ano\Fase 3\Projetos\energy-monitor\src\main\java\br\com\fiap\EnergyMonitor\mappers\EquipmentMapper.java
+C:\Users\USER\Documents\FIAP\2º Ano\Fase 3\Projetos\energy-monitor\src\main\java\br\com\fiap\EnergyMonitor\mappers\SectorMapper.java
+C:\Users\USER\Documents\FIAP\2º Ano\Fase 3\Projetos\energy-monitor\src\main\java\br\com\fiap\EnergyMonitor\model\Equipment.java
+C:\Users\USER\Documents\FIAP\2º Ano\Fase 3\Projetos\energy-monitor\src\main\java\br\com\fiap\EnergyMonitor\model\EquipmentUsageLog.java
+C:\Users\USER\Documents\FIAP\2º Ano\Fase 3\Projetos\energy-monitor\src\main\java\br\com\fiap\EnergyMonitor\model\Sector.java
+C:\Users\USER\Documents\FIAP\2º Ano\Fase 3\Projetos\energy-monitor\src\main\java\br\com\fiap\EnergyMonitor\model\User.java
+C:\Users\USER\Documents\FIAP\2º Ano\Fase 3\Projetos\energy-monitor\src\main\java\br\com\fiap\EnergyMonitor\model\UserRoles.java
+C:\Users\USER\Documents\FIAP\2º Ano\Fase 3\Projetos\energy-monitor\src\main\java\br\com\fiap\EnergyMonitor\repository\EquipmentRepository.java
+C:\Users\USER\Documents\FIAP\2º Ano\Fase 3\Projetos\energy-monitor\src\main\java\br\com\fiap\EnergyMonitor\repository\EquipmentUsageLogRepository.java
+C:\Users\USER\Documents\FIAP\2º Ano\Fase 3\Projetos\energy-monitor\src\main\java\br\com\fiap\EnergyMonitor\repository\SectorRepository.java
+C:\Users\USER\Documents\FIAP\2º Ano\Fase 3\Projetos\energy-monitor\src\main\java\br\com\fiap\EnergyMonitor\repository\UserRepository.java
+C:\Users\USER\Documents\FIAP\2º Ano\Fase 3\Projetos\energy-monitor\src\main\java\br\com\fiap\EnergyMonitor\service\AuthorizationService.java
+C:\Users\USER\Documents\FIAP\2º Ano\Fase 3\Projetos\energy-monitor\src\main\java\br\com\fiap\EnergyMonitor\service\EquipmentService.java
+C:\Users\USER\Documents\FIAP\2º Ano\Fase 3\Projetos\energy-monitor\src\main\java\br\com\fiap\EnergyMonitor\service\SectorService.java
+C:\Users\USER\Documents\FIAP\2º Ano\Fase 3\Projetos\energy-monitor\src\main\java\br\com\fiap\EnergyMonitor\service\TokenService.java
+C:\Users\USER\Documents\FIAP\2º Ano\Fase 3\Projetos\energy-monitor\src\main\java\br\com\fiap\EnergyMonitor\service\UserService.java
