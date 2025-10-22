@@ -1,9 +1,9 @@
-
 # language: pt
-Funcionalidade: Cadastro de novo usuário
+Funcionalidade: Autenticação de usuário
   Como usuário da API
-  Quero conseguir cadastrar um novo usuário
-  Para que o registro seja salvo corretamente no sistema
+  Quero conseguir um token de acesso
+  Para que eu possa acessar as demais funcionalidades do sistema
+
   Cenário: Cadastro bem-sucedido de usuário
     Dado que eu tenha os seguintes dados de usuário:
       | campo          | valor                  |
@@ -14,13 +14,11 @@ Funcionalidade: Cadastro de novo usuário
     Quando eu enviar a requisição para o endpoint "/auth/register" de cadastro de usuário
     Então o status code da resposta deve ser 201
 
-  Cenário: Cadastro de usuário sem sucesso ao passar o campo role inválido
+  Cenário: Deve ser possível acessar o sistema
     Dado que eu tenha os seguintes dados de usuário:
       | campo          | valor                  |
-      | name           | Rodrigo Alves          |
-      | email          | rodrigo.alves.com|
+      | email          | rodrigo.alves@gmail.com|
       | password       | 123456                 |
-      | role           | ADMIN                  |
-    Quando eu enviar a requisição para o endpoint "/auth/register" de cadastro de usuário
-    Então o status code da resposta deve ser 400
-    E o corpo de resposta de erro da api deve retornar a mensagem "Dados fornecidos estão em formato inválido"
+    Quando eu enviar a requisição para o endpoint "/auth/login" de autenticação
+    Então o status code da resposta deve ser 200
+    E o token retornado deve ser válido e não expirado
