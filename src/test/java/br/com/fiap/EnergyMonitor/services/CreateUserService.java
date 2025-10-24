@@ -22,7 +22,15 @@ public class CreateUserService {
             .create();
     public Response response;
     String baseUrl = "http://localhost:8080";
-    String bearerToken;
+    public String bearerToken;
+
+    public void setGeneratedToken(String token) {
+        bearerToken = token;
+    }
+
+    public String getGeneratedToken() {
+        return bearerToken;
+    }
 
     public void setFieldsDelivery(String field, String value) {
         switch (field) {
