@@ -1,0 +1,96 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.com/object1761239611.json",
+  "title": "Root",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "consumptionLimit",
+    "user"
+  ],
+  "properties": {
+    "id": {
+      "$id": "#root/id",
+      "title": "Id",
+      "type": "integer",
+      "examples": [
+        5
+      ],
+      "default": 0
+    },
+    "name": {
+      "$id": "#root/name",
+      "title": "Name",
+      "type": "string",
+      "default": "",
+      "examples": [
+        "Casa"
+      ],
+      "pattern": "^.*$"
+    },
+    "consumptionLimit": {
+      "$id": "#root/consumptionLimit",
+      "title": "Consumptionlimit",
+      "type": "integer",
+      "examples": [
+        58
+      ],
+      "default": 0
+    },
+    "user": {
+      "$id": "#root/user",
+      "title": "User",
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "email",
+        "role"
+      ],
+      "properties": {
+        "id": {
+          "$id": "#root/user/id",
+          "title": "Id",
+          "type": "integer",
+          "examples": [
+            23
+          ],
+          "default": 0
+        },
+        "name": {
+          "$id": "#root/user/name",
+          "title": "Name",
+          "type": "string",
+          "default": "",
+          "examples": [
+            "Alvaro Novais"
+          ],
+          "pattern": "^.*$"
+        },
+        "email": {
+          "$id": "#root/user/email",
+          "title": "Email",
+          "type": "string",
+          "default": "",
+          "examples": [
+            "123@gmail.com"
+          ],
+          "pattern": "^.*$"
+        },
+        "role": {
+          "$id": "#root/user/role",
+          "title": "Role",
+          "type": "string",
+          "default": "",
+          "examples": [
+            "ADMIN"
+          ],
+          "pattern": "^.*$"
+        }
+      }
+    }
+
+  }
+}

@@ -43,7 +43,7 @@ public class CreateSectorService {
             case "id" -> sectorModel.setId(Integer.parseInt(value));
             case "name" -> sectorModel.setName(value);
             case "consumptionLimit" -> sectorModel.setConsumptionLimit(Double.valueOf(value));
-            //case "user" -> sectorModel.setUser(new User(value));
+            //case "user" -> SectorMapper.MapToEntity(dto, value);
             default -> throw new IllegalStateException("Unexpected feld" + field);
         }
     }
@@ -90,7 +90,7 @@ public class CreateSectorService {
 
     public void setContract(String contract) throws IOException {
         switch (contract) {
-            case "Cadastro bem-sucedido de entrega" -> jsonSchema = loadJsonFromFile(schemasPath + "cadastro-bem-sucedido-de-entrega.json");
+            case "Cadastro bem-sucedido de setor" -> jsonSchema = loadJsonFromFile(schemasPath + "cadastro-bem-sucedido-de-setor.json");
             default -> throw new IllegalStateException("Unexpected contract" + contract);
         }
     }
@@ -106,10 +106,12 @@ public class CreateSectorService {
 
     private JSONObject loadJsonFromFile(String filePath) throws IOException {
         try (InputStream inputStream = Files.newInputStream(Paths.get(filePath))) {
-            JSONTokener tokener = new JSONTokener(inputStream.toString());
+            // Read the entire file content as a string
+            String content = new String(inputStream.readAllBytes());
+            JSONTokener tokener = new JSONTokener(content);
             return new JSONObject(tokener);
         } catch (JSONException e) {
-            throw new RuntimeException(e);
+            throw new RuntimeException("Failed to parse JSON from file: " + filePath, e);
         }
     }
 

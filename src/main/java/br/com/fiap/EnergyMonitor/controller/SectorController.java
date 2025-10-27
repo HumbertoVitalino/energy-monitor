@@ -8,6 +8,8 @@ import br.com.fiap.EnergyMonitor.model.User;
 import br.com.fiap.EnergyMonitor.service.AuthorizationService;
 import br.com.fiap.EnergyMonitor.service.SectorService;
 import jakarta.validation.Valid;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -21,6 +23,8 @@ import java.util.List;
 @RequestMapping("/api")
 public class SectorController {
 
+    private static final Logger logger = LoggerFactory.getLogger(SectorController.class);
+
     @Autowired
     private SectorService sectorService;
 
@@ -30,7 +34,6 @@ public class SectorController {
     @PostMapping("/sector")
     public ResponseEntity<SectorOutputDto> create(@RequestBody @Valid CreateSectorDto dto) {
         UserDetails userDetails = authService.getAuthenticatedUser();
-
         if (userDetails instanceof User user) {
             Sector sector = SectorMapper.MapToEntity(dto, user);
             Sector created = sectorService.create(sector);
