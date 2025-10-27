@@ -100,8 +100,7 @@ public class CreateSectorService {
         JsonSchemaFactory schemaFactory = JsonSchemaFactory.getInstance(SpecVersion.VersionFlag.V4);
         JsonSchema schema = schemaFactory.getSchema(jsonSchema.toString());
         JsonNode jsonResponseNode = mapper.readTree(jsonResponse.toString());
-        Set<ValidationMessage> schemaValidationErrors = schema.validate(jsonResponseNode);
-        return schemaValidationErrors;
+        return schema.validate(jsonResponseNode);
     }
 
     private JSONObject loadJsonFromFile(String filePath) throws IOException {

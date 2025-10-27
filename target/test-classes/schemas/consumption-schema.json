@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Consumption Response Schema",
+  "type": "object",
+  "required": [
+    "id",
+    "sectorId",
+    "sectorName",
+    "consumptionValue",
+    "timestamp",
+    "measurementUnit"
+  ],
+  "properties": {
+    "id": {
+      "type": "integer",
+      "description": "ID único do registro de consumo",
+      "minimum": 1
+    },
+    "sectorId": {
+      "type": "integer",
+      "description": "ID do setor monitorado",
+      "minimum": 1
+    },
+    "sectorName": {
+      "type": "string",
+      "description": "Nome do setor monitorado",
+      "minLength": 1,
+      "maxLength": 255
+    },
+    "consumptionValue": {
+      "type": "number",
+      "minimum": 0,
+      "description": "Valor do consumo energético"
+    },
+    "measurementUnit": {
+      "type": "string",
+      "description": "Unidade de medida do consumo",
+      "enum": ["kWh", "MWh", "Wh"],
+      "default": "kWh"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Data e hora da medição"
+    }
+  },
+  "additionalProperties": false
+}

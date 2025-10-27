@@ -28,18 +28,23 @@ public class CreateSectorSteps {
 
     @Dado("que eu tenha um usuário autenticado")
     public void queEuTenhaUmUsuárioAutenticado() {
-        /*createUserService.setFieldsDelivery("name", "Douglas");
-        createUserService.setFieldsDelivery("email", "douglas@gmail.com");
-        createUserService.setFieldsDelivery("password", "123456");
+        createUserService.setFieldsDelivery("name", "carlosJose");
+        createUserService.setFieldsDelivery("email", "carlosjose@gmail.com");
+        createUserService.setFieldsDelivery("password", "12345678");
         createUserService.setFieldsDelivery("role", "ADMIN");
-        createUserService.createUser("/auth/register");*/
+        createUserService.createUser("/auth/register");
         // Then login to get the token
         //Precisa ser os dados de um usuário já cadastrado para funcionar
-        createUserService.setFieldsDelivery("email", "douglas@gmail.com");
-        createUserService.setFieldsDelivery("password", "123456");
+        createUserService.setFieldsDelivery("email", "carlosjose@gmail.com");
+        createUserService.setFieldsDelivery("password", "12345678");
         createUserService.acessUser("/auth/login");
 
         Assert.assertNotNull("Token não foi gerado", createUserService.getGeneratedToken());
+    }
+
+    @E("que o arquivo de contrato esperado é o {string}")
+    public void queOArquivoDeContratoEsperadoÉO(String contract) throws IOException {
+        createSectorService.setContract(contract);
     }
 
     @Quando("eu enviar a requisição para o endpoint {string} de cadastro de setor")
@@ -48,10 +53,7 @@ public class CreateSectorSteps {
         createSectorService.createSector(endpoint, token);
     }
 
-    @E("que o arquivo de contrato esperado é o {string}")
-    public void queOArquivoDeContratoEsperadoÉO(String contract) throws IOException {
-        createSectorService.setContract(contract);
-    }
+
 
     @Entao("a resposta da requisição deve estar em conformidade com o contrato selecionado")
     public void aRespostaDaRequisiçãoDeveEstarEmConformidadeComOContratoSelecionado() throws JSONException, IOException {

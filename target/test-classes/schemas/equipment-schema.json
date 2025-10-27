@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Equipment Response Schema",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "consumptionPerHour",
+    "sectorId",
+    "active",
+    "maxActiveHours"
+  ],
+  "properties": {
+    "id": {
+      "type": "integer",
+      "description": "ID único do equipamento"
+    },
+    "name": {
+      "type": "string",
+      "description": "Nome do equipamento",
+      "minLength": 1,
+      "maxLength": 255
+    },
+    "consumptionPerHour": {
+      "type": "number",
+      "minimum": 0,
+      "description": "Consumo em kWh por hora"
+    },
+    "sectorId": {
+      "type": "integer",
+      "description": "ID do setor ao qual o equipamento pertence"
+    },
+    "active": {
+      "type": "boolean",
+      "description": "Status do equipamento (ligado/desligado)"
+    },
+    "maxActiveHours": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Máximo de horas que o equipamento pode ficar ativo"
+    }
+  },
+  "additionalProperties": false
+}
