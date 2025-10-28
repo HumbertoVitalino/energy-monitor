@@ -7,9 +7,9 @@ Funcionalidade: Cadastro de novo usuário
   Cenário: Cadastro bem-sucedido de usuário
     Dado que eu tenha os seguintes dados de usuário:
       | campo          | valor                  |
-      | name           | Alves                  |
-      | email          | jose@gmail.com       |
-      | password       | 123456789               |
+      | name           | Alves  a               |
+      | email          | padro@gmail.com        |
+      | password       | 123456789              |
       | role           | ADMIN                  |
     Quando eu enviar a requisição para o endpoint "/auth/register" de cadastro de usuário
     Então o status code da resposta deve ser 201
@@ -17,8 +17,8 @@ Funcionalidade: Cadastro de novo usuário
   Cenário: Cadastro de usuário sem sucesso ao passar o campo role inválido
     Dado que eu tenha os seguintes dados de usuário:
       | campo          | valor                  |
-      | name           | Alves                  |
-      | email          | jose.com               |
+      | name           | Alves a                |
+      | email          | pedro.com              |
       | password       | 123456789              |
       | role           | ADMIN                  |
     Quando eu enviar a requisição para o endpoint "/auth/register" de cadastro de usuário
